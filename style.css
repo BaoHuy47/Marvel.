@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    height: auto;
+
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* Tạo khung chứa ảnh */
+.image-container {
+    display: flex;
+    position: relative;
+    width: 146px;
+    height: 400px;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    flex-grow: 1;
+    transition: all 1s ease;
+}
+
+/* Định dạng văn bản overlay */
+.text-overlay {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    /* Đưa văn bản lên giữa theo chiều dọc */
+    left: 50%;
+    /* Đưa văn bản lên giữa theo chiều ngang */
+    transform: translate(-50%, -50%);
+    /* Đưa văn bản ra giữa hoàn toàn */
+    background-color: transparent;
+    /* Màu nền với độ trong suốt */
+    margin: 0px 10px 10px 0px;
+    padding: 0px 16px 0px;
+    /* Khoảng cách giữa văn bản và viền container */
+    border-radius: 5px;
+    /* Bo tròn viền container */
+}
+
+/* Định dạng chữ trong overlay */
+.text-overlay p {
+    font-size: 16px;
+    font-weight: bold;
+    color: transparent;
+    font-family: 'Maven Pro';
+    align-items: center;
+    font-size: 30px;
+}
+
+.image-container:hover {
+    flex-grow: 3;
+}
+
+.image-container:hover .text-overlay {
+    transition: all 2s linear;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.image-container:hover .text-overlay p {
+    color: #000;
+}
+
+.brand {
+    width: auto;
+    height: 230px;
+    background-image: url("images/images/marvel.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: rgb(255, 0, 0);
+    opacity: 0.6; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Maven Pro';
+    font-size: 50px;
+}
